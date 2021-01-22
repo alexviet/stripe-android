@@ -35,7 +35,7 @@ class CvcEditText @JvmOverloads constructor(
             return Cvc.Unvalidated(fieldText)
         }
 
-    internal val cvc: Cvc.Validated?
+    val cvc: Cvc.Validated?
         get() {
             return unvalidatedCvc.validate(cardBrand.maxCvcLength)
         }
@@ -44,7 +44,7 @@ class CvcEditText @JvmOverloads constructor(
 
     // invoked when a valid CVC has been entered
     @JvmSynthetic
-    internal var completionCallback: () -> Unit = {}
+    var completionCallback: () -> Unit = {}
 
     init {
         setErrorMessage(resources.getString(R.string.invalid_cvc))
@@ -78,7 +78,7 @@ class CvcEditText @JvmOverloads constructor(
      * instead of directly on the [CvcEditText]
      */
     @JvmSynthetic
-    internal fun updateBrand(
+    fun updateBrand(
         cardBrand: CardBrand,
         customHintText: String? = null,
         textInputLayout: TextInputLayout? = null

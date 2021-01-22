@@ -751,7 +751,7 @@ class CardMultilineWidget @JvmOverloads constructor(
         )
     }
 
-    internal fun interface CardBrandIconSupplier {
+    fun interface CardBrandIconSupplier {
         fun get(cardBrand: CardBrand): CardBrandIcon
     }
 

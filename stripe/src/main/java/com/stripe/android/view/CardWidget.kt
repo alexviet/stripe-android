@@ -6,7 +6,7 @@ import com.stripe.android.model.Card
 import com.stripe.android.model.CardParams
 import com.stripe.android.model.PaymentMethodCreateParams
 
-internal interface CardWidget {
+interface CardWidget {
     /**
      * A [Card] representing the card details and postal code if all fields are valid;
      * otherwise `null`

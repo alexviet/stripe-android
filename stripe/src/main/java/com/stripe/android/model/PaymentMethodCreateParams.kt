@@ -180,7 +180,7 @@ data class PaymentMethodCreateParams internal constructor(
             }.orEmpty()
         }
 
-    internal enum class Type(internal val code: String, val hasMandate: Boolean = false) {
+    enum class Type(internal val code: String, val hasMandate: Boolean = false) {
         Card("card"),
         Ideal("ideal"),
         Fpx("fpx"),
@@ -202,7 +202,7 @@ data class PaymentMethodCreateParams internal constructor(
     }
 
     @Parcelize
-    data class Card internal constructor(
+    data class Card constructor(
         private val number: String? = null,
         private val expiryMonth: Int? = null,
         private val expiryYear: Int? = null,

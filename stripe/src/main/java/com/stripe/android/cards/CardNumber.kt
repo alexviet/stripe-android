@@ -2,7 +2,7 @@ package com.stripe.android.cards
 
 import com.stripe.android.CardUtils
 
-internal sealed class CardNumber {
+sealed class CardNumber {
 
     /**
      * A representation of a partial or full card number that hasn't been validated.

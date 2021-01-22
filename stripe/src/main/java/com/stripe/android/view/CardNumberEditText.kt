@@ -32,7 +32,7 @@ import kotlin.coroutines.CoroutineContext
 /**
  * A [StripeEditText] that handles spacing out the digits of a credit card.
  */
-class CardNumberEditText internal constructor(
+class CardNumberEditText  constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = androidx.appcompat.R.attr.editTextStyle,

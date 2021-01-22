@@ -25,7 +25,7 @@ class ExpiryDateEditText @JvmOverloads constructor(
 
     // invoked when a valid date has been entered
     @JvmSynthetic
-    internal var completionCallback: () -> Unit = {}
+    var completionCallback: () -> Unit = {}
 
     /**
      * Is `true` if the text entered represents a valid expiry date that has not
@@ -58,7 +58,7 @@ class ExpiryDateEditText @JvmOverloads constructor(
             return resources.getString(R.string.acc_label_expiry_date_node, text)
         }
 
-    internal var includeSeparatorGaps: Boolean by Delegates.observable(
+    var includeSeparatorGaps: Boolean by Delegates.observable(
         INCLUDE_SEPARATOR_GAPS_DEFAULT
     ) { _, _, newValue ->
         updateSeparatorUi(newValue)
@@ -243,7 +243,7 @@ class ExpiryDateEditText @JvmOverloads constructor(
      * @return an index within the string at which to put the cursor
      */
     @VisibleForTesting
-    internal fun updateSelectionIndex(
+    fun updateSelectionIndex(
         newLength: Int,
         editActionStart: Int,
         editActionAddition: Int,
